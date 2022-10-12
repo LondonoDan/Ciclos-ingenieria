@@ -1,0 +1,42 @@
+Algoritmo sin_titulo
+	// Algoritmo para estudiar las tablas de multiplicar, el sistema te solicitara la respuesta y posteriormente te dice la respuesta y cuantos aciertos tuvistes adicional si ganaste o perdiste
+	
+	Escribir "Ingrese la tabla de multiplicar que desea estudiar "
+	leer tabla
+	Escribir " vamor a practicar la tabla del " tabla
+	tabla_proceso<-0
+	correcta=0
+	incorrecta=0
+	Para contador<-1 Hasta 10 Con Paso 1 Hacer
+		tabla_proceso<-tabla*contador
+		Escribir " cuanto es " tabla " * " contador
+		leer respuesta
+		Escribir " Respuesta " tabla " * "  contador " = " tabla_proceso
+		Si respuesta == tabla_proceso Entonces
+			correcta<-correcta+1
+			
+			Escribir " Felicitaciones la respuesta es correcta"
+			
+		SiNo
+			incorrecta=incorrecta+1
+			Escribir " Error la respuesta es incorrecta "
+			
+			
+		Fin Si
+		
+	Fin Para
+	
+	Escribir " tuviste " correcta " aciertos " " y " incorrecta " errores "
+	Si correcta <5 Entonces
+		escribir " La calificaci�n es INSUFICIENTE, tuviste " correcta " aciertos "
+     Fin Si
+	Si correcta <7 Entonces
+		escribir " La calificaci�n es ACEPTABLE, tuviste " correcta " aciertos "
+	Fin Si
+	Si correcta <9 Entonces
+		escribir " La calificaci�n es SOBRESALIENTE, tuviste " correcta " aciertos "
+		
+		SiNo
+			escribir " La calificaci�n es EXCELENTE, tuviste " correcta " aciertos "
+	Fin Si
+FinAlgoritmo
