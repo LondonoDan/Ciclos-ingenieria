@@ -1,0 +1,93 @@
+Algoritmo sin_titulo
+	contador_coloaltos=0
+	contador_colbajos=0
+	contador_colmedios=0
+	contador_arg_altos=0
+	contador_arg_medios=0
+	contador_arg_bajos=0
+	contador_brasil_altos=0
+	contador_brasil_medios=0
+	contador_brasil_bajos=0
+	Contador_colombianos=0
+	contador_argentinos=0
+	contador_brasil=0
+	Para registro<-1 Hasta 3 Con Paso 1 Hacer
+		Escribir " Ingrese la edad "
+		leer edad
+		escribir " Ingrese el tipo Alto (1), Bajo(2), Medio(3) "
+		leer tipo
+		Escribir " Ingrese la nacionalidad Colombiano(1), Argentino(2), brasile�o(3) "
+		leer nacionalidad
+		Si nacionalidad==1 y tipo==1 Entonces
+			contador_coloaltos=contador_coloaltos+1
+			
+		Fin Si
+		Si nacionalidad==1 y tipo==2 Entonces
+			contador_colbajos=contador_colbajos+1
+			
+		Fin Si
+		Si nacionalidad==1 y tipo==3 Entonces
+			contador_colmedios=contador_colmedios+1
+			
+		Fin Si
+		Si nacionalidad==2 y tipo==1 Entonces
+			contador_arg_altos=contador_arg_altos+1
+			
+		Fin Si
+		Si nacionalidad==2 y tipo==2 Entonces
+			contador_arg_bajos=contador_arg_bajos+1
+			
+		Fin Si
+		Si nacionalidad==2 y tipo==3 Entonces
+			contador_arg_medios=contador_arg_medios+1
+			
+		Fin Si
+		Si nacionalidad==3 y tipo==1 Entonces
+			contador_brasil_altos=contador_brasil_altos+1
+			
+		Fin Si
+		Si nacionalidad==3 y tipo==2 Entonces
+			contador_brasil_medios=contador_brasil_medios+1
+			
+		Fin Si
+		Si nacionalidad==3 y tipo==3 Entonces
+			contador_brasil_medios=contador_brasil_medios+1
+			
+		Fin Si
+		Si nacionalidad==1 Entonces
+			Contador_colombianos=Contador_colombianos+1
+		Fin Si
+		
+		Si nacionalidad==2 Entonces
+			contador_argentinos=contador_argentinos+1
+		Fin Si
+		Si nacionalidad==3 Entonces
+			contador_brasil=Contador_brasil+1
+		Fin Si
+		
+		
+		Si edad >=18 Entonces
+			contador_mayor=contador_mayor+1
+		SiNo
+			contador_menor=contador_menor+1
+		Fin Si
+		
+	Fin Para
+	Escribir " hay " contador_coloaltos " Colombianos  Altos"
+	Escribir " hay " contador_colbajos " Colombianos  bajos"
+	Escribir " hay " contador_colmedios " Colombianos  Medios"
+	
+	Escribir " hay " contador_arg_altos " Argentinos Altos"
+	Escribir " hay " contador_arg_bajos  " Argentinos  bajos"
+	Escribir " hay " contador_arg_medios " Argentinos  Medios"
+	
+	Escribir " hay " contador_brasil_altos " Brasile�os Altos"
+	Escribir " hay " contador_brasil_bajos  " Brasile�os  bajos"
+	Escribir " hay " contador_brasil_medios " Brasile�os  Medios"
+	
+	Escribir " la cantidad de personas mayores en los registros es de " contador_mayor
+	Escribir " la cantidad de personas menores en los registros es de " contador_menor
+	Escribir " El total de colombianos de 70 registros es de " Contador_colombianos
+	Escribir " El total de Argentinos de 70 registros es de " contador_argentinos
+	Escribir " El total de Brasile�os de 70 registros es de " contador_brasil
+FinAlgoritmo
