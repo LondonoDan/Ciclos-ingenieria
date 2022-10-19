@@ -1,0 +1,40 @@
+Algoritmo zoo
+	definir animal Como Entero
+	Contador_edad1=0
+	contador_edad2=0
+	contador_edad3=0
+	animal= azar(3)+1
+	si animal ==1 Entonces
+		n_animal= " Elefante "
+		cantidad_animal = 20
+	SiNo
+		si animal ==2 entonces 
+			n_animal= " Jirafa "
+			cantidad_animal= 15
+		SiNo
+			n_animal= " Chimpance "
+			cantidad_animal = 40
+		FinSi
+	FinSi
+	edad= azar(3)+1
+	Para edad<-1 Hasta cantidad_animal Con Paso 1 Hacer
+		Si edad<=3 Entonces
+			Contador_edad1=Contador_edad1+1
+		SiNo
+			Si edad<=5 Entonces
+				contador_edad2=contador_edad2+1
+				
+			SiNo
+				contador_edad3=contador_edad3+1
+			Fin Si
+		Fin Si
+	Fin Para
+	
+	Escribir " la cantidad de animales escogidos de mas de 5 a�os son " contador_edad3 " el porcentaje de edades es " Contador_edad3/cantidad_animal*100 " % "
+	Escribir " la cantidad de animales escogidos de 3 a 5 a�os son " contador_edad2 " el porcentaje de edades es " Contador_edad2/cantidad_animal*100   " % " 
+	Escribir " la cantidad de animales escogidos de 1 a 3 a�os son " Contador_edad1 " el porcentaje de edades es " Contador_edad1/cantidad_animal*100 " % "
+	Escribir " la cantidad de " n_animal " a estudiar es " cantidad_animal
+	
+	
+	
+FinAlgoritmo
