@@ -1,42 +1,23 @@
-
 Algoritmo sin_titulo
-	Definir horas como real
-	Definir valor_hora como real
-	Definir proceso_horaextra como real
-	Definir proceso_horaextras como real
-	definir total_pago Como Real
-	suma_extra=0
-	total_pago=0
-	Escribir " Ingrese el valor de la hora "
-	leer valor_hora
-	Escribir " Ingrese las horas trabajadas "
-	leer horas
+	Definir horas, valor_hora, valor_total, extra_doble Como Real
 	
-	total_pago= horas * valor_hora
-	Escribir " El total a pagar sin horas extras es de " total_pago
-	Para x<-48 Hasta horas Con Paso 8 Hacer
-		Si horas >48  Entonces
-			total_pago= total_pago-11
-			proceso_horaextra= valor_hora * 8 * 2
+	escribir " Ingrese el valor de la hora de trabajo "
+	leer valor_hora
+	Escribir " Ingrese las horas trabajadas en la semana "
+	leer horas
+		Si horas >=56 Entonces
+			extra_triple= horas - 56
+			valor_total = 48 * valor_hora + (8 * valor_hora * 2) + (extra_triple * valor_hora * 3)
+	SiNo
 			
-		
+		Si horas >=48 Entonces
+		extra_doble= horas - 48
+		valor_total = 48 * valor_hora + (extra_doble * valor_hora * 2)
+	SiNo
+			valor_total = horas * valor_hora
 		Fin Si
 	
-		Para i<-56 Hasta horas Con Paso 8 Hacer
-			
-			suma_extra=horas/8-7
-		    final= suma_extra*8
-		    extra= valor_hora * final *3 
-		
-				
-		fin para
-		total= horas*valor_hora+proceso_horaextra+ extra
-		
-	Fin Para
-	Escribir " Tuviste un incremento por trabajar " horas " horas el valor es de " proceso_horaextra
-	Escribir " Tuviste un incremento por trabajar " horas " horas el valor es de " extra
-	Escribir " El total con las extras es de " total
+	Fin Si
 	
-	Escribir suma_extra 
-	
+	Escribir " El valor del pago por " horas " extras es de " valor_total
 FinAlgoritmo
